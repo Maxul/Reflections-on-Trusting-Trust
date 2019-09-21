@@ -60,6 +60,6 @@ diff clang-tcc-tcc gcc-tcc-tcc
 
 ### Generate SHA256 digests
 ```sh
-openssl dgst -sha256 gcc-tcc-tcc/*
-openssl dgst -sha256 clang-tcc-tcc/*
+openssl dgst -sha256 /tmp/gcc-tcc-tcc/*
+openssl dgst -sha256 /tmp/clang-tcc-tcc/*
 ```
