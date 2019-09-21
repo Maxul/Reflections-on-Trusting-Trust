@@ -23,6 +23,5 @@ make clean && make distclean
 make clean && make distclean
 
 # Generate SHA256 digests
-openssl dgst -sha256 /tmp/gcc-tcc-tcc/bin/*
-openssl dgst -sha256 /tmp/clang-tcc-tcc/bin/*
+openssl dgst -sha256 `find /tmp -type f -perm -111 -name "tcc"`
 

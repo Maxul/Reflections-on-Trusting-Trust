@@ -11,6 +11,7 @@ cd tcc-0.9.27
 
 # compile the default and install
 ./configure && make -j$(nproc) && sudo make install
+make clean && make distclean
 
 # compile with GCC
 ./configure --cc=gcc && make -j$(nproc)
@@ -37,6 +38,7 @@ cd ..
 # uninstall the default
 cd tcc-0.9.27
 ./configure && make -j$(nproc) && sudo make uninstall
+make clean && make distclean
 
 # Generate SHA256 digests
-openssl dgst -sha256 `find . -name "tcc"`
+openssl dgst -sha256 `find . -type f -perm -111 -name "tcc"`
